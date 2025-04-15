@@ -1,6 +1,6 @@
 {
   "name": "@orion76/debug-logger",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Идея библиотеки Plugin была заимствована у CMF Drupal 8.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
