@@ -11,7 +11,7 @@ export function createDebugLogger(config: IDebugLoggerInstanceConfig) {
     const { label, format: globalFormat, log } = config;
 
     return (message?: string, data?: unknown[] | Function, localFormat?: TFormatFunction, condition?: TConditionFunction) => {
-        if (!condition || condition()) {
+        if (!condition || condition(config, message, data)) {
             const _data = typeof data === 'function' ? data() : data;
             const _format = localFormat || globalFormat;
             const output: unknown[] = [label];
